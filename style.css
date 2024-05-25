@@ -1,0 +1,197 @@
+/* CSS reset taken from: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;  
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* End of CSS reset */
+
+html {
+    font-size: 100%;
+    font-family: 'JetBrains Mono', Verdana, Geneva, Tahoma, sans-serif;
+    --accent-color: rgb(82, 61, 61);
+    --left-padding: 4rem;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    color: aliceblue;
+    font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    gap: .2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 26%;
+}
+
+.logo-container > img {
+    width: 75px;
+    height: auto;
+}
+
+.img-credit {
+    color: aliceblue;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.img-credit p {
+    font-size: .5rem;
+    font-weight: 400;
+}
+
+.main-container {
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    height: 100%;
+}
+
+a {
+    color: aliceblue;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    max-width: 66ch;
+}
+
+button {
+    border: none;
+    background-color: var(--accent-color);
+    color: aliceblue;
+    padding: .5rem 2rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+form > div {
+    background-color: aliceblue;
+    box-shadow: 10px 5px 5px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0rem 1rem var(--left-padding);
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    gap: 10%;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: rgb(41, 40, 40);
+    font-size: .7rem;
+}
+
+input {
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+input:focus {
+    border: solid 1px rgb(69, 133, 236);
+    box-shadow: 0 0 8px rgba(155, 159, 163, 0.5);
+    outline: none;
+}
+
+.hero, 
+.return-user,
+button {
+    margin-left: var(--left-padding);
+}
+
+.hero p:last-child {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.return-user p {
+    font-size: 1rem;
+}
+
+.return-user a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.password-error {
+    color: red;
+    font-size: .5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.invalid-input, 
+input[type="password"]:not(:placeholder-shown):invalid {
+    border: solid 1px rgb(236, 69, 69);
+    box-shadow: 0 0 8px rgba(155, 159, 163, 0.5);
+    outline: none;
+}
+
